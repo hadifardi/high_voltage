@@ -7,6 +7,7 @@ f1 = figure(1);
 f1Position = get(f1, 'Position');
 f1Position(1) = 0;
 set(f1, 'Position', f1Position)
+title('W-plane')
 xlabel('u')
 ylabel('v')
 
@@ -14,31 +15,32 @@ f2 = figure(2);
 f2Position = get(f2, 'Position');
 f2Position(1) = ceil(screenWidth/2);
 set(f2, 'Position', f2Position)
+title('Z-plane')
 xlabel('x')
 ylabel('y')
 
 a = 1;
-lines_number = 60;
+lines_number = 15;
 map_grid(lines_number, a);
 
 function map_grid(n, a)
     u = linspace(-pi/2, pi/2,n);
     v = linspace(-1,1,n);
     
-    for i = 1:n
-        % vertical line
-        u_vert = linspace(u(i), u(i), n);
-        
-        figure(1)
-        hold on
-        plot(u_vert, v, 'k')
-        hold off
-        
-        figure(2)
-        hold on
-        map_line(u_vert, v, a)
-        hold off
-    end
+%     for i = 1:n
+%         % vertical line
+%         u_vert = linspace(u(i), u(i), n);
+%         
+%         figure(1)
+%         hold on
+%         plot(u_vert, v, 'k')
+%         hold off
+%         
+%         figure(2)
+%         hold on
+%         map_line(u_vert, v, a)
+%         hold off
+%     end
     
     for i = 1:n
         % horizontal line
