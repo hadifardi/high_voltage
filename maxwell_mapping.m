@@ -7,6 +7,7 @@ f1 = figure(1);
 f1Position = get(f1, 'Position');
 f1Position(1) = 0;
 set(f1, 'Position', f1Position)
+title('W-plane')
 xlabel('u')
 ylabel('v')
 
@@ -14,6 +15,7 @@ f2 = figure(2);
 f2Position = get(f2, 'Position');
 f2Position(1) = ceil(screenWidth/2);
 set(f2, 'Position', f2Position)
+title('Z-plane')
 xlabel('x')
 ylabel('y')
 
