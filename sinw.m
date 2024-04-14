@@ -27,20 +27,20 @@ function map_grid(n, a)
     u = linspace(-pi/2, pi/2,n);
     v = linspace(-1,1,n);
     
-%     for i = 1:n
-%         % vertical line
-%         u_vert = linspace(u(i), u(i), n);
-%         
-%         figure(1)
-%         hold on
-%         plot(u_vert, v, 'k')
-%         hold off
-%         
-%         figure(2)
-%         hold on
-%         map_line(u_vert, v, a)
-%         hold off
-%     end
+    for i = 1:n
+        % vertical line
+        u_vert = linspace(u(i), u(i), n);
+        
+        figure(1)
+        hold on
+        plot(u_vert, v, 'k')
+        hold off
+        
+        figure(2)
+        hold on
+        map_line(u_vert, v, a)
+        hold off
+    end
     
     for i = 1:n
         % horizontal line
